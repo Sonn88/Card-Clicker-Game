@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Click Card Game!</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
     <style>
+        body{
+            background-color: black;
+        }
         .cardList{
             display: flex;
             flex-wrap: wrap;
@@ -21,16 +23,29 @@
             color: black;
         }
         .active{
-            background-color: #96b786;
+            background-color: #170f5d;
+            color: silver;
         }
         .inactive{
-            background-color: #4e4159;
-            color: silver;
+            background-color: #738c9b;
+            color:black;
+
         }
         .content{
             width: 1400px;
+
+            box-shadow: 0 1px 3px 0 rgba(49, 89, 77, 0.28), 0 1px 2px -1px rgba(49, 89, 77, 0.28);
+            background: #242933;
+            padding: 20px;
+            border-radius: 7px;
+
         }
 
+
+        .container{
+            max-width: 1300px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -40,10 +55,10 @@
         <div class="cardList">
 
         </div>   <p id="game-over"></p>
-        <a href="nextLevel.html"><button>NEXT LEVEL</button></a>
+        <a href="cardClickGame.html"><button>LAST LEVEL</button></a>
     </div>
 </div>
-<script src="index.js">
+<script src="nextLevel.js">
 
 </script>
 </body>

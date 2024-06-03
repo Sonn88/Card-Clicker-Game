@@ -5,7 +5,7 @@ const allpoints = document.getElementById('game-over')
 let number = 0
 score.innerHTML=`Your Score:`+ number
 scoreboard.appendChild(score)
-
+score.style.color="white"
 
 function  addCard(value){
     let card = document.createElement('div')
@@ -23,7 +23,7 @@ function buildBoard(){
 buildBoard();
 let interval = setInterval(function () {
     addCard('click',cardList.children.length + 1)//make it start ar 1 not 0
-}, 2000);
+}, 1000);
 
 cardList.addEventListener('click',function (e){
     console.log(e.target);
@@ -40,12 +40,14 @@ cardList.addEventListener('click',function (e){
         number= addNumber(number)
         score.remove()
         score.innerHTML=`Your Score:` + number
+        score.style.color='sliver'
         scoreboard.appendChild(score)
     }
     if(e.target.classList.contains('late')){
         e.target.remove()
         number = subNumber(number)
         score.innerHTML=`Your Score:` + number
+        score.style.color="white"
     }
 
     let children = cardList.children;
@@ -54,8 +56,10 @@ cardList.addEventListener('click',function (e){
         interval=null
         let points= document.createElement('h1')
         points.innerHTML=`YOU BEAT THE GAME  `
+        points.style.color="white"
         let scores = document.createElement('h2')
         scores.innerHTML=`You Got `+ number+ ` Points`
+        scores.style.color="white"
         score.remove()
         allpoints.appendChild(points)
         allpoints.appendChild(scores)
